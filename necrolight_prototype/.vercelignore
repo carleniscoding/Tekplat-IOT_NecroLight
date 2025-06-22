@@ -1,0 +1,32 @@
+# Flutter specific
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Other
+*.log
+node_modules/
+test/
+lib/
+android/
+ios/
+linux/
+macos/
+windows/
+web/
+README.md
+analysis_options.yaml
+pubspec.yaml
+pubspec.lock
