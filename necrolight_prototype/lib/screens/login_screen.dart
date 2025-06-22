@@ -74,19 +74,12 @@ class _LoginScreenState extends State<LoginScreen> {
   }  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(AppAssets.necroLightBackground),
-            fit: BoxFit.cover,
-            opacity: 0.4, // 40% opacity
-          ),
-        ),
-        child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 40.0),
-            child: Form(
-              key: _formKey,
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 32.0, vertical: 40.0),
+          child: Form(
+            key: _formKey,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -273,13 +266,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     style: TextStyle(
                       fontSize: 10,
                       color: Colors.orange,
-                      fontWeight: FontWeight.w500,
-                    ),
+                      fontWeight: FontWeight.w500,                    ),
                   ),
                 ),
               ],
-            ),          ),
-        ),
+            ),
+          ),
         ),
       ),
     );

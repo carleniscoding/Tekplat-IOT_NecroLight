@@ -26,10 +26,10 @@ class MyApp extends StatelessWidget {
         Provider<AuthService>(create: (_) => AuthService()),
       ],
       child: MaterialApp(
-        title: 'NecroLight Prototype',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        title: 'NecroLight Prototype',        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
           useMaterial3: true,
+          primarySwatch: Colors.grey,
         ),
         home: const AuthWrapper(),
         debugShowCheckedModeBanner: false,
