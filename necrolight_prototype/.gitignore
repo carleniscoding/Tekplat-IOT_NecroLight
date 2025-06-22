@@ -31,7 +31,8 @@ migrate_working_dir/
 .flutter-plugins-dependencies
 .pub-cache/
 .pub/
-/build/
+# Note: Commented out /build/ so web build files are included for deployment
+# /build/
 
 # Symbolication related
 app.*.symbols
