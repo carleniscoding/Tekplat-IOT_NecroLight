@@ -1,0 +1,13 @@
+{
+  "name": "necrolight-prototype",
+  "version": "1.0.0",
+  "description": "NecroLight IoT Flutter Web App",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "flutter build web --release"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

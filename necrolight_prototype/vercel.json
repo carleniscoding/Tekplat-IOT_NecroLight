@@ -1,20 +1,8 @@
 {
-  "version": 2,
-  "name": "necrolight-prototype",
-  "builds": [
+  "rewrites": [
     {
-      "src": "build/web/**",
-      "use": "@vercel/static"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
-  ],
-  "routes": [
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ],
-  "outputDirectory": "build/web"
+  ]
 }
