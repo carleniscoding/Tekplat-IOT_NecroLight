@@ -1,38 +1,115 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
   <base href="/">
-
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
-
+  <meta name="description" content="NecroLight IoT monitoring system">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="necrolight_prototype">
+  <meta name="apple-mobile-web-app-title" content="NecroLight">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>necrolight_prototype</title>
+  <title>NecroLight - IoT Monitoring System</title>
   <link rel="manifest" href="manifest.json">
+  
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #333;
+    }
+    
+    .loading-container {
+      text-align: center;
+      max-width: 400px;
+      padding: 20px;
+    }
+    
+    .logo {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 30px;
+      background: #f0f0f0;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+    }
+    
+    .spinner {
+      border: 3px solid #f3f3f3;
+      border-top: 3px solid #333;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 2s linear infinite;
+      margin: 20px auto;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    h1 {
+      margin: 0 0 10px 0;
+      font-size: 28px;
+      font-weight: 600;
+    }
+    
+    p {
+      margin: 0 0 20px 0;
+      color: #666;
+      font-size: 16px;
+    }
+    
+    .status {
+      font-size: 14px;
+      color: #999;
+    }
+  </style>
 </head>
 <body>
+  <div class="loading-container">
+    <div class="logo">🩺</div>
+    <h1>NecroLight</h1>
+    <p>IoT Health Monitoring System</p>
+    <div class="spinner"></div>
+    <div class="status">Loading application...</div>
+  </div>
+
+  <script>
+    // Loading timeout fallback
+    setTimeout(() => {
+      const statusEl = document.querySelector('.status');
+      if (statusEl) {
+        statusEl.textContent = 'Initializing Flutter engine...';
+      }
+    }, 2000);
+    
+    setTimeout(() => {
+      const statusEl = document.querySelector('.status');
+      if (statusEl) {
+        statusEl.textContent = 'Almost ready...';
+      }
+    }, 5000);
+  </script>
+  
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
