@@ -1,3 +1,10 @@
 {
-  "public": "build/web"
+  "buildCommand": "echo 'Using pre-built files'",
+  "outputDirectory": "build/web",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
